@@ -21,25 +21,25 @@
 }
 
 .input--submit {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin: 0.75rem;
-    border-radius: 50px;
-    right: 0px;
-    border: none;
-    font-size: 1rem;
-    background-color: #2f74c0;
-    color: white;
-    transition: 0.2s all;
-    box-shadow: 0 0 10px black;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 0.75rem;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 1rem;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
 }
 
 .input--submit:hover {
-    background-color: #388ae2;
+  background-color: #388ae2;
 }
 
 .input--submit:active {
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
 }
