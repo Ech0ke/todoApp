@@ -51,7 +51,6 @@
   flex-wrap: wrap;
 }
 
-
 .todos--single {
   display: flex;
   width: 29.5%;
@@ -78,6 +77,10 @@
   cursor: pointer;
 }
 
+.todos--edit {
+  width: 100%;
+}
+
 @media screen and (max-width: 700px) {
   .input {
     width: 95%;
@@ -87,6 +90,6 @@
   }
   .todos--single {
     width: 100%;
+    position: relative;
   }
-  
 }
