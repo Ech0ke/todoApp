@@ -23,9 +23,7 @@ const App: React.FC = () => {
     const data = window.localStorage.getItem("allTodos")
     console.log(data)
     if (data !== null) {
-      console.log(`Before parse: ${data}`)
       setTodos(JSON.parse(data))
-      console.log(`After parse: ${data}`)
     }
   }, [])
 
