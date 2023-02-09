@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import "./App.css"
 import InputField from "./components/InputField"
 import TodoList from "./components/ToDoList"
@@ -16,7 +16,27 @@ const App: React.FC = () => {
       setTodo("")
     }
   }
-  console.log(todos)
+
+  const initialRender = useRef(true)
+
+  useEffect(() => {
+    const data = window.localStorage.getItem("allTodos")
+    console.log(data)
+    if (data !== null) {
+      console.log(`Before parse: ${data}`)
+      setTodos(JSON.parse(data))
+      console.log(`After parse: ${data}`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false
+      return
+    }
+
+    window.localStorage.setItem("allTodos", JSON.stringify(todos))
+  }, [todos])
 
   return (
     <div className="App">
