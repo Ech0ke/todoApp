@@ -1,6 +1,6 @@
 .input {
   display: flex;
-  width: 90%;
+  width: 95%;
   position: relative;
   align-items: center;
 }
@@ -44,20 +44,45 @@
   box-shadow: 0 0 5px black;
 }
 
+.ToDoList--container {
+  display: grid;
+  width: 95%;
+  justify-content: flex-end;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0 0.685rem 0;
+  gap: 1rem;
+}
+
 .todos {
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
+  flex-direction: column;
   flex-wrap: wrap;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgb(50, 195, 205);
+}
+
+.ToDoList--heading {
+  font-size: 1.875rem;
+  margin: auto 0;
+  color: white;
+}
+
+.remove {
+  background-color: rgb(235, 103, 80);
 }
 
 .todos--single {
   display: flex;
-  width: 29.5%;
   border-radius: 0.313rem;
   padding: 1.25rem;
   margin-top: 0.938rem;
   background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+}
+
+.todos--single:hover {
+  transform: scale(1.03);
 }
 
 .todos--singleText {
@@ -82,14 +107,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .input {
-    width: 95%;
-  }
-  .todos {
-    width: 95%;
-  }
-  .todos--single {
-    width: 100%;
-    position: relative;
+  .ToDoList--container {
+    grid-template-columns: 1fr;
   }
 }
